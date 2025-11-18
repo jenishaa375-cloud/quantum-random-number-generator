@@ -1,7 +1,6 @@
-# Quantum Dice Simulator — Executive Summary
+# Quantum Dice Simulator
 
 # Author: Jenisha Baral
-# Project: Simulating a Dice Roll Using Quantum Superposition
 
 # Executive Summary
 
