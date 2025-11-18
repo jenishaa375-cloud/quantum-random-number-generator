@@ -1,11 +1,12 @@
 # Quantum Dice Simulator — Executive Summary
 
 # Author: Jenisha Baral
-# Project: Simulating a Fair Dice Using Quantum Superposition
+# Project: Simulating a Dice Roll Using Quantum Superposition
 
 # Executive Summary
 
-This project demonstrates how a simple quantum circuit can be used to simulate the rolling of a dice. The goal was to use the principles of quantum superposition and random measurement to generate outcomes from 1 to 6 with nearly uniform probability.
+This project demonstrates how a simple quantum circuit can be used to simulate the rolling of a dice. The goal was to use the principles of quantum superposition and random measurement to
+generate outcomes from 1 to 6 with nearly uniform probability.
 
 # Circuit Design
 
@@ -38,15 +39,6 @@ A dictionary recorded the count of each outcome from 1 to 6.
 The final results were displayed in a bar graph, showing that the distribution is nearly uniform.
 This confirms that the quantum superposition–based method behaves like an ideal random dice generator.
 
-# Key Points Demonstrated
-
-How quantum superposition can replace classical random number generators.
-
-How to map quantum binary outcomes to real-world values (like dice results).
-
-How repeated measurements and rejection sampling ensure fairness.
-
-Use of visualization to verify distribution uniformity.
 
 # Conclusion
 
