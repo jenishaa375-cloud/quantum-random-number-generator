@@ -1,0 +1,41 @@
+from qiskit import QuantumCircuit
+from qiskit_aer import AerSimulator
+import matplotlib.pyplot as plt
+qc=QuantumCircuit(3,3)
+qc.h(0)
+qc.h(1)
+qc.h(2)
+qc.measure([0,1,2],[0,1,2])
+sim=AerSimulator()
+myl={}
+for i in range(6):
+    myl[str(i+1)]=0
+for i in range(1000):
+    result=sim.run(qc,shots=1).result().get_counts()
+    l=list(result.keys())
+    num=int(l[0],2)
+    if num<6:
+        myl[str(num+1)]+=1
+    else:
+        while True:
+            k=sim.run(qc,shots=1).result().get_counts()
+            l1=list(k.keys())
+            n=int(l1[0],2)
+            if n<6:
+                myl[str(n+1)]+=1
+                break   
+
+#print(myl)
+#x=myl[0].count('1')
+#print(x)
+
+#print(dec)
+plt.figure()
+plt.bar(myl.keys(),myl.values())
+for i,v in enumerate(myl.values()):
+    plt.text(i,v+2,str(v),ha='center')
+plt.xlabel("Dice value")
+plt.ylabel("Repetition")
+plt.title("Dice roll result")
+#plt.xticks(myl.keys())
+plt.show()
