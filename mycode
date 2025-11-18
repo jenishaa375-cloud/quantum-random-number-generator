@@ -28,7 +28,7 @@ for i in range(1000):
 #print(myl)
 #x=myl[0].count('1')
 #print(x)
-
+print("Your roll gives: ",num+1)
 #print(dec)
 plt.figure()
 plt.bar(myl.keys(),myl.values())
